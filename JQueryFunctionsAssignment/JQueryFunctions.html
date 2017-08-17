@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My JQuery Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      // .click example:
+      $("#onclick").click(function(){
+        $(this).css("color","grey");
+      });
+
+      $("#onclickbtn").click(function(){
+        $("#onclick").css("color","blue");
+      });
+
+      $("#hide").click(function(){
+        $("#hideshow").hide("slow");
+      });
+
+      $("#show").click(function(){
+        $("#hideshow").show("slow");
+      });
+
+      $("#btntoggle").click(function(){
+        $("#toggle").toggle("slow");
+      });
+
+      $("#btnslide").click(function(){
+        $("#slide").slideUp();
+      });
+
+      $("#btnslide2").click(function(){
+        $("#slide").slideDown();
+      });
+
+      $("#btnslideToggle").click(function(){
+        $("#slideToggle").slideToggle();
+      });
+
+      $("#btnfadein").click(function(){
+        $("#fadein").css("color","#f1f4f8");
+        $("a").fadeIn(1500);
+      });
+
+      $("#btnfadeout").click(function() {
+        $("#fadein").css("color","black");
+        $("#jqlink").fadeOut(1500);
+      });
+
+      $("#addclassbtn").click(function() {
+        $("#addclass").addClass("addClass");
+      });
+
+      $("#beforebtn").click(function(){
+        $("#abalance").before("<p>Carlos' Account: (I wish!!)</p>")
+      });
+
+      $("#afterbtn").click(function(){
+        $("#abalance").after("<br /><button>Transfer ALL to Coding Dojo instructor??</button>");
+      });
+
+      $("#btnappend").click(function(){
+        $("#reservation").append("<strong style='color:green;'>Confirmed</strong>")
+      });
+
+      $("#btnhtml").click(function(){
+        $("#reservationDiv").html("<h3>Your Reservation is:  <span style='color:green'>Confirmed</span> </h3>");
+      });
+
+
+
+
+
+    });
+    </script>
+
+    <style>
+    .addClass{
+      color: red;
+      background: grey;
+    }
+
+    </style>
+
+  </head>
+  <body style="background:#3c4c5b;">
+    <h1 style="text-align: center; color:#009ac7;">Welcome to Carlos' Dojo</h1>
+    <h3 style="text-align: center; color:#009ac7;">Recap JQuery JQuick!</h3>
+
+<!-- ============================================
+.click explanation / example
+============================================ -->
+
+    <div class="JQueryFunc">
+      <h3>.click function</h3>
+      <p class="explanation">
+        In an nutshell, triggers an action once
+        the user clicks on an element, could be
+        text, buttoms, paragraphs, etc.
+      </p>
+
+      <div class="Example">
+        <h3>Example:</h3>
+
+        <p class="clickExample" id="onclick">
+          Click the following button to change
+          this text to <span style="color:blue;">blue</span>, click on this
+          text to set it back to grey
+        </p>
+        <button class="btnclickexample" id="onclickbtn">Change paragraph to <span>"blue"</span></button>
+
+      </div>
+    </div>
+    <!-- ============================================
+    .hide & .show explanation / example
+    ============================================ -->
+    <div class="JQueryFunc">
+      <h3>.hide & .show functions</h3>
+      <p class="explanation">
+        These are a really cool functions to manipulate
+        how things appear and dissapear on the screen.
+        This could be useful to creat cool animations
+      </p>
+      <div class="Example">
+        <h3>Example:</h3>
+        <p class="clickExample" id="hideshow">
+          Click the "hide" button to hide
+          this text. click on the "show" button to
+          bring it back.
+        </p>
+        <button class="btnclickexample" id="hide">Hide Text</button>
+        <button class="btnclickexample" id="show">Show Text</span></button>
+      </div>
+    </div>
+
+    <!-- ============================================
+    .toggle explanation / example
+    ============================================ -->
+    <div class="JQueryFunc">
+      <h3>.toggle function</h3>
+      <p class="explanation">
+        Toggle function allows you to switch the
+        visibility of an element. it is like a combination
+        of .hide and .show when used in its most basic form
+      </p>
+      <div class="Example">
+        <h3>Example:</h3>
+        <p class="clickExample" id="toggle">
+          Click the "toggle" button to make this text appear and
+          dissapear
+        </p>
+        <button class="btnclickexample" id="btntoggle">Toggle</button>
+      </div>
+    </div>
+
+    <!-- ============================================
+    .slideDown & .slideUp explanation / example
+    ============================================ -->
+    <div class="JQueryFunc">
+      <h3>.slideUp and .slideDown functions</h3>
+      <p class="explanation">
+        Switches the visibility of an item upwards or downwards.
+        Seems useful if you have a condition which an element should
+        elegantly appear or dissapear.
+      </p>
+      <div class="Example">
+        <h3>Example:</h3>
+        <p class="clickExample" id="slide">
+          Click the "Slide Up" and "Slide Down" buttons to make this text move
+          upwards and downwards
+        </p>
+        <button class="btnclickexample" id="btnslide">Slide Up</button>
+        <button class="btnclickexample" id="btnslide2">Slide Down</button>
+      </div>
+    </div>
+
+    <!-- ============================================
+    .slideDown & .slideUp explanation / example
+    ============================================ -->
+    <div class="JQueryFunc">
+      <h3>.slideToggle function</h3>
+      <p class="explanation">
+        Switches the visibility of an item upwards or downwards with one single
+        command. Useful over .slideUp and .slideDown separately if you need the element
+        to do both.
+      </p>
+      <div class="Example">
+        <h3>Example:</h3>
+        <p class="clickExample" id="slideToggle">
+          Click the "Slide Up & Down" button to make this text go upwards
+          and downwards
+        </p>
+        <button class="btnclickexample" id="btnslideToggle">Slide Up & Down</button>
+
+      </div>
+    </div>
+
+    <!-- ============================================
+    .fadeIn & .fadeOut explanation / example
+    ============================================ -->
+    <div class="JQueryFunc">
+      <h3>.fadeIn & .fadeOut functions</h3>
+      <p class="explanation">
+        Displays / hides an element by fading it in and out on the screen
+      </p>
+      <div class="Example">
+        <br>
+        <h3>Example:</h3>
+        <p class="clickExample" id="fadein">
+          .fadeIn & .fadeOut are very useful functions in JQuery, why don't you click on the "Fade In" button to find
+          more information and see it at work. - Once you get the Link, click "Fade Out" for it all to go back to the
+            way it was
+          </thead>
+          <a style="display:none" id="jqlink" href="http://api.jquery.com/fadeIn/">http://api.jquery.com/fadeIn/</a>
+        </p>
+        <button class="btnclickexample" id="btnfadein">Fade In</button>
+        <button class="btnclickexample" id="btnfadeout">Fade Out</button>
+      </div>
+    </div>
+
+    <!-- ============================================
+    .addClass explanation / example
+    ============================================ -->
+    <div class="JQueryFunc">
+      <h3>.addClass function</h3>
+      <p class="explanation">
+        this is very useful when part of you logic entails to change the appearance of an element
+        say, in an ecommerce site, an item is out of stock and you want to highlight it differently.
+        You can add a class that will in turn call specific css styling for this.
+      </p>
+      <div class="Example">
+        <br>
+        <h3 style="margin-top: 0px;">Example:</h3>
+        <p style="margin-top: 0px;font-size:14px;" class="clickExample" id="addclass" >
+          If you click the "Add Class" button, the following actions will be triggered:
+          the "p" tag containing this paragraph will be given the class name "addClass" which will trigger
+          the following css code:
+          "  .addClass{
+              color: red;
+              background: grey;
+            }"
+        </p>
+        <button class="btnclickexample" id="addclassbtn">Add Class</button>
+
+      </div>
+    </div>
+    <!-- ============================================
+    .before and .after explanation / example
+    ============================================ -->
+    <div style="height:200px;" class="JQueryFunc">
+      <h3>.before & .after functions</h3>
+      <p class="explanation">
+        A common use for these functiones is to display elements before or after another element
+      </p>
+      <div class="Example">
+        <br>
+        <h3>Example:</h3>
+        <p class="clickExample" id="beforeafter">
+          Say this is this is an account balance, before it you want the name of the account before and
+          a button to "transfer" after <br>
+
+          <a id="abalance"href="">Balance: $400,000,000.00</a>
+        </p>
+        <button class="btnclickexample" id="beforebtn">Use before to display account name</button>
+        <button class="btnclickexample" id="afterbtn">Use after for the withdraw button</button>
+      </div>
+    </div>
+
+    <!-- ============================================
+    .append explanation / example
+    ============================================ -->
+    <div class="JQueryFunc" style="height:240px;">
+      <h3>.append function</h3>
+      <p class="explanation">
+        This is a good function to insert content following an element depending on info that
+        might need to be displayed as the outcome of an event.
+      </p>
+      <div class="Example" >
+        <h3>Example:</h3>
+        <p class="clickExample" id="append">
+          Imagine you are booking an hotel room, you want to confirm the reservation and
+          you want something on the screen to tell you it went through:
+          <h3 id="reservation">Your Reservation is:</h3>
+          <a href="">1 Presidential Suite for 10 nights</a>
+
+        </p>
+        <button class="btnclickexample" id="btnappend">Confirm Reservation</button>
+
+      </div>
+    </div>
+
+    <!-- ============================================
+    .html explanation / example
+    ============================================ -->
+    <div class="JQueryFunc" style="height:240px;">
+      <h3>.html function</h3>
+      <p class="explanation">
+        The .html function helps you add html elements inside an existing one.
+      </p>
+      <div class="Example" >
+        <h3  style="margin-top:55px;">Example:</h3>
+        <p class="clickExample" id="html" style="margin-top:0px;">
+          Let's take a step back from our example above, lets say you want to view
+          any confirmed reservations you have in your account. You can click "View Confirmed Reservations"
+          and it will display the html tags containing the information
+        </p>
+        <button class="btnclickexample" id="btnhtml">View Confirmed Reservations</button>
+        <div id="reservationDiv"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.JQueryFunc {
+    width: 970px;
+    margin: 0px auto;
+    height: 160px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    background-color: #f1f4f8;
+    border-radius: 15px;
+
+
+}
+
+.JQueryFunc h3{
+  margin-top: 40px;
+}
+
+.explanation {
+  font-size: 12px;
+  width: 250px;
+  padding: 10px;
+  height: auto;
+  text-align: justify;
+  border: 1px solid grey;
+  display: inline-block;
+
+}
+.Example{
+  text-align: center;
+  position: relative;
+  left: 110px;
+  top: -125px;
+}
+
+
+.clickExample{
+  font-size: 16px;
+  width:550px;
+  height: 200px;
+  margin-left: 180px;
+  padding: 10px;
+  height: auto;
+  color: grey
+  display: inline-block;
+  border: 1px solid grey;
+  text-align: center;
+}
+
+.btnclickexample{
+  margin-top: 0px;
+  position: relative;
+  top: 10px;
+  font-size: 14px;
+  padding: 5px;
+  background: #009ac7;
+  color: #f1f4f8;
+  border-radius: 8px;
+
+
+}
