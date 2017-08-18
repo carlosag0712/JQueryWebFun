@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="jQuery assignment">
+	<title>Ninja to Cat</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script>
+  var HTMLattribute = " ";
+
+  for(var i=0; i<5;i++){
+    HTMLattribute += "<img src='cat"+i+".png' ninja-pic='ninja"+i+".png' temp-data=''><br>"
+
+  }
+
+
+		$(document).ready(function(){
+
+      $('.container').append(HTMLattribute);
+			$('img').click(function(){
+				$(this).attr('temp-data', $(this).attr('src'));
+				$(this).attr('src', $(this).attr('ninja-pic'));
+				$(this).attr('alt', $(this).attr('temp-data'));
+			});
+		});
+	</script>
+</head>
+<body>
+  <div class="container">
+
+  </div>
+</body>
+</html>
