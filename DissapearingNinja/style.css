@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+
+.container {
+  width: 1030px;
+  margin: 0px auto;
+}
+
+
+img{
+  height: 25%;
+  width: 25%;
+}
