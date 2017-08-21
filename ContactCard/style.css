@@ -1,0 +1,60 @@
+/**{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}*/
+
+.container{
+  width: 970px;
+  margin: 0px auto;
+}
+
+#inputformdiv{
+  margin-top: 50px;
+  display: inline-block;
+}
+
+#description{
+  display: none;
+}
+
+#contact{
+width: 150px;
+height: 75px;
+text-align: center;
+border: 1px solid black;
+border-radius: 5px;
+margin: 5px 0
+
+}
+
+#contactcards {
+  margin-top: 50px;
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+form {
+  display:block;
+  width: 400px;
+  height: 400px;
+
+}
+
+form label{
+  display: block;
+  margin-bottom: 20px;
+}
+
+form button {
+  display: block;
+  width: 80px;
+  height: 20px;
+  border-radius: -5px;
+}
+
+textarea{
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
